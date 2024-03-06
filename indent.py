@@ -21,8 +21,6 @@ def fix_indent(input_file):
             output_file.append(' ' * current_indent + line)
             if line.endswith(')') or line.endswith(']'):
                 current_indent -= 4
-            if current_indent <= 0:
-                current_indent == 0 # Indentation doesn't go negative 
     # joins the lines
     return '\n'.join(output_file)
 
