@@ -7,6 +7,9 @@ c: int = a + b
 def missing_colon()
     pass
 
+def missing_colon(num1, num2)
+    return num1 + num2
+
 deff function_def_mispelled():
     pass
 
@@ -20,4 +23,7 @@ df this_one_too():
     pass
 
 def missing_parentheses
+    pass
+
+def missing_parertheses:
     pass
