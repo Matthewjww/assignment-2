@@ -1,3 +1,5 @@
+# Author Eduardo Fuentes
+
 def fix_function_headers(code):
     corrected_lines = []
     # List of common misspellings of 'def'
@@ -33,7 +35,7 @@ def fix_function_headers(code):
     return corrected_code
 
 
-def process_file(input_file_path):
+def process_file(input_file_path, output_file_path):
     # https://www.w3schools.com/python/python_file_open.asp
     with open(input_file_path, 'r') as file:
         input_code = file.read()
@@ -42,14 +44,14 @@ def process_file(input_file_path):
 
     # https://www.w3schools.com/python/python_file_write.asp
     # Generate output file path by appending '_corrected' before the file extension
-    output_file_path = input_file_path.rsplit('.', 1)[0] + '_corrected.' + input_file_path.rsplit('.', 1)[1]
 
     with open(output_file_path, 'w') as file:
         file.write(corrected_code)
 
-    print(f"Corrected code has been written to {output_file_path}")
+    print(f"functionHeader: Corrected code has been written to {output_file_path}")
 
 
-if __name__ == "__main__":
-    input_file_path = input("Enter the path to the input Python file: ")
-    process_file(input_file_path)
+# if __name__ == "__main__":
+#     input_file_path = input("Enter the path to the input Python file: ")
+#     output_file_path = input("Enter Output file path: ")
+#     process_file(input_file_path, output_file_path)

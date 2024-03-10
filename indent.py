@@ -24,14 +24,29 @@ def fix_indent(input_file):
     # joins the lines
     return '\n'.join(output_file)
 
+
+def process_file(input_file_path, output_file_path):
+    # https://www.w3schools.com/python/python_file_open.asp
+    with open(input_file_path, 'r') as file:
+        input_code = file.read()
+
+    corrected_code = fix_indent(input_code)
+
+    # https://www.w3schools.com/python/python_file_write.asp
+    # Generate output file path by appending '_corrected' before the file extension
+
+    with open(output_file_path, 'w') as file:
+        file.write(corrected_code)
+
+
 # Example usage: TAKE OUT FOR PROJECT 
-if __name__ == "__main__":
-    input_file = """
-def example_function():
-if True:
-print("This line is indented correctly.")
-else:
-("This line should be indented further.")
-"""
-    output_file = fix_indent(input_file)
-    print(output_file)
+# if __name__ == "__main__":
+#     input_file = """
+# def example_function():
+# if True:
+# print("This line is indented correctly.")
+# else:
+# ("This line should be indented further.")
+# """
+#     output_file = fix_indent(input_file)
+#     print(output_file)
