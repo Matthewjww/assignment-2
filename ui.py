@@ -48,7 +48,7 @@ class MenuWindow:
         # Process the original code file
         functionHeader.process_file(input_code_path, output_code_path)
         indent.process_file(output_code_path, output_code_path)
-        count = 2  # printcounter.count_print_keywords(output_code_path) <- need to figure out why this is causing error
+        count = printcounter.count_print_keywords(output_code_path)
 
         txt = open(f"PyCheck_Output_{timestr}.txt", 'w')
 
@@ -56,9 +56,13 @@ class MenuWindow:
             for line in file:
                 txt.write(line)
 
+        txt.write("\n")
+
         with open(output_code_path, 'r') as file:
             for line in file:
                 txt.write(line)
+
+        txt.write("\n")
 
         txt.write(f"\n # Print keyword was used {count} times!")
 

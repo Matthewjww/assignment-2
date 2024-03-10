@@ -1,4 +1,7 @@
 # blah blah blah
+
+print("Hello!")
+print("First, print test!")
 print("test")
 a: int = 1
 b: int = 2
@@ -27,3 +30,9 @@ def missing_parentheses
 
 def missing_parertheses:
     pass
+
+def wrong_indent():
+pass
+
+if 1 > 0:
+print("Yes")
