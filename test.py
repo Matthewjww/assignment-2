@@ -13,7 +13,7 @@ def missing_colon()
 def missing_colon(num1, num2)
     return num1 + num2
 
-deff function_def_mispelled():
+    deff function_def_mispelled():
     pass
 
 defi another_mispelled_function():
