@@ -4,7 +4,7 @@ def fix_indent(input_file):
 
     for line in input_file.split('\n'):
         line = line.strip()
-        if line.startswith(('pass', 'print', 'return')):
+        if line.startswith(('pass', 'f', 'return')):
             output_file.append(' ' * (current_indent + 4) + line)
         else:
             line.startswith('def')

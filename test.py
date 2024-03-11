@@ -35,4 +35,4 @@ def wrong_indent():
 pass
 
 if 1 > 0:
-print("Yes")
+f = a + b
